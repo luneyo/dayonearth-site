@@ -3,22 +3,158 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Day, On Earth</title>
-<meta name="description" content="The day's weather in a sentence.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Sora:wght@600&display=swap" rel="stylesheet">
+<title>Day, On Earth: weather, made simple</title>
+<meta name="description" content="Day, On Earth makes weather forecasts simpler. A sentence tells you exactly what happens in your day. For iPhone and iPad.">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151514" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Day, On Earth: weather, made simple">
+<meta property="og:description" content="A sentence tells you exactly what happens in your day.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/sora-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header><a class="mark" href="./">Day, <span>On Earth</span></a></header>
+<body class="home">
+
+<header class="bar">
+  <a class="mark" href="./">Day, <span>On Earth</span></a>
+  <nav aria-label="Site">
+    <a href="support/">Help</a>
+    <a href="privacy/">Privacy</a>
+    <span class="pill soon-pill" aria-label="Coming soon to the App Store">Coming soon</span>
+  </nav>
+</header>
+
 <main>
-<h1 class="hero"><mark class="cloud">Cloudy</mark> but dry till <mark class="time">8 PM</mark>, then <mark class="rain">rain</mark>.</h1>
-<p class="lede">Day, On Earth tells you the day's weather in a sentence, with one practical line underneath. For iPhone and iPad.</p>
-<p class="practical">Bring an umbrella: rain from 8 PM.</p>
-<p>No account, no ads, no tracking. Severe-weather warnings are always free. Weather from Apple Weather.</p>
-<p class="soon">Coming to the App Store.</p>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">For iPhone and iPad</p>
+    <h1>Weather,<br>made <mark class="lime">simple</mark>.</h1>
+    <p class="lede">Day, On Earth makes weather forecasts simpler. A sentence tells you exactly what happens in your day.</p>
+
+    <p class="cta-row">
+      <span class="button soon" role="text">Coming soon to the App Store</span>
+    </p>
+
+    <form class="signup" id="signup" action="https://docs.google.com/forms/d/e/1FAIpQLSfE2oA1u5cGiUQ3PWv5Zl8grKGwSD46WzG3Y14NWF5krkcduA/formResponse" method="post" target="_blank">
+      <label for="email" class="sr">Email address</label>
+      <input id="email" name="entry.1178225151" type="email" inputmode="email" autocomplete="email" required placeholder="you@example.com">
+      <button type="submit">Keep me posted</button>
+      <p class="fine">News about Day, On Earth: the launch, and now and then what's new. Nothing else. Ask to be removed any time.</p>
+      <p class="status" id="signup-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <figure class="qr" hidden>
+      <img src="img/qr-app-store.png" width="124" height="124" alt="QR code for Day, On Earth on the App Store">
+      <figcaption>Scan with your iPhone</figcaption>
+    </figure>
+  </div>
+
+  <div class="hero-phone" aria-label="Day, On Earth on an iPhone, showing a sunny, a rainy and a severe day, and dark mode">
+    <div class="phone">
+      <div class="screen cycle">
+        <img src="img/phone-sunny.jpg" width="760" height="1653" alt="Today screen: Sunny all day. It's hot. Warmer at 13:00. Wear thin layers.">
+        <img src="img/phone-rain.jpg" width="760" height="1653" alt="Today screen: Drizzle now, stops at 11:00 and it stays cloudy. The clouds break up at 20:00." loading="lazy">
+        <img src="img/phone-severe.jpg" width="760" height="1653" alt="Today screen: Orange warning for wind starts at 14:00. Plan around it." loading="lazy">
+        <img src="img/phone-dark.jpg" width="760" height="1653" alt="Today screen in dark mode: Sunny all day. It's hot." loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<ul class="trust" aria-label="At a glance">
+  <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v10m0 0-4-4m4 4 4-4M5 19.5h14"/></svg><span>Free to download</span></li>
+  <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c0-3.6 3-6 7-6s7 2.4 7 6"/><path d="M4 4l16 16"/></svg><span>No account</span></li>
+  <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M4 4l16 16"/></svg><span>No ads</span></li>
+  <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.5 12S6 6 12 6s9.5 6 9.5 6-3.5 6-9.5 6S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5"/><path d="M4 4l16 16"/></svg><span>Nothing collected</span></li>
+  <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4 21 19.5H3L12 4z"/><path d="M12 10v4.5M12 17.2v.1"/></svg><span>Severe warnings always free</span></li>
+</ul>
+
+<section class="feature">
+  <div class="feature-text">
+    <h2>Every change comes with its time.</h2>
+    <p><strong>Rain at 1, sun by 4.</strong> One glance and you know what the day does, and when it does it.</p>
+  </div>
+  <div class="phone small"><div class="screen"><img src="img/phone-rain.jpg" width="760" height="1653" alt="A rainy day described in one sentence, with the times of each change" loading="lazy"></div></div>
+</section>
+
+<section class="feature flip">
+  <div class="feature-text">
+    <h2>The sentence, on your Home Screen.</h2>
+    <p><strong>Widgets that read like a person.</strong> Put the whole day on your Home Screen or Lock Screen, without opening the app.</p>
+  </div>
+  <div class="phone small"><div class="screen"><img src="img/phone-home-screen.jpg" width="760" height="1653" alt="An iPhone Home Screen with a small and a medium Day, On Earth widget" loading="lazy"></div></div>
+</section>
+
+<section class="feature">
+  <div class="feature-text">
+    <h2>Plain words when it matters.</h2>
+    <p><strong>Severe weather is said straight.</strong> The warning, who issued it, and what to do. Always free.</p>
+  </div>
+  <div class="phone small"><div class="screen"><img src="img/phone-severe.jpg" width="760" height="1653" alt="A severe weather warning in plain words, with the issuing agency" loading="lazy"></div></div>
+</section>
+
+<section class="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title">Good to know</h2>
+  <details>
+    <summary>Is it free?</summary>
+    <p>The app is free and complete. One purchase, once, puts the full sentence in every widget, on the Home Screen and the Lock Screen. Without it, widgets show the day's numbers.</p>
+  </details>
+  <details>
+    <summary>Where does the weather come from?</summary>
+    <p>From Apple Weather. Severe-weather warnings come from your country's official weather service, named on the warning.</p>
+  </details>
+  <details>
+    <summary>Does it collect anything about me?</summary>
+    <p>No account, no ads, no tracking. Your location is rounded to about 2 km and used only to get your forecast. <a href="privacy/">Read the privacy policy</a>.</p>
+  </details>
+  <details>
+    <summary>Which devices does it run on?</summary>
+    <p>iPhone and iPad, on iOS 18 or later.</p>
+  </details>
+</section>
+
+<section class="closing">
+  <h2>Weather, made simple.</h2>
+  <p class="cta-row"><span class="button soon" role="text">Coming soon to the App Store</span></p>
+  <p class="fine">Want news about Day, On Earth? <a href="#signup">Leave your address</a>.</p>
+</section>
+
 </main>
-<footer><a href="privacy/">Privacy</a> · <a href="support/">Help</a> · <a href="mailto:hello@dayonearth.app">hello@dayonearth.app</a></footer>
+
+<footer class="foot">
+  <a href="privacy/">Privacy</a> · <a href="support/">Help</a> · <a href="mailto:hello@dayonearth.app">hello@dayonearth.app</a>
+  <p>Weather data from Apple Weather. © 2026 Day, On Earth.</p>
+</footer>
+
+<script>
+// The sign-up goes to the Google Form behind it (a sheet only the developer can open). Without scripts the form
+// still works: it posts in a new tab.
+(function () {
+  var form = document.getElementById('signup'), status = document.getElementById('signup-status');
+  if (!form || !window.fetch) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = form.elements['entry.1178225151'].value.trim();
+    if (!email) return;
+    var button = form.querySelector('button');
+    button.disabled = true;
+    status.textContent = 'Sending…';
+    var body = new URLSearchParams();
+    body.set('entry.1178225151', email);
+    fetch(form.action, { method: 'POST', mode: 'no-cors', body: body })
+      .then(function () {
+        form.reset();
+        status.textContent = "Thank you. You're on the list.";
+      })
+      .catch(function () {
+        status.textContent = "That didn't go through. Please try again, or write to hello@dayonearth.app.";
+      })
+      .then(function () { button.disabled = false; });
+  });
+})();
+</script>
 </body>
 </html>
