@@ -48,7 +48,8 @@ footer { border-top: 1px solid var(--line); padding-top: 16px; padding-bottom: 3
 .home .lede { font-size: clamp(18px, 2.4vw, 21px); max-width: 30em; margin: 0 0 22px; }
 .cta-row { margin: 0 0 18px; }
 .button { display: inline-block; padding: 14px 24px; border-radius: 10px; background: var(--ink); color: var(--bg); font: 600 16px Manrope, sans-serif; text-decoration: none; }
-.button.soon { cursor: default; }
+.badge { display: inline-block; line-height: 0; }
+.badge img { display: block; height: 50px; width: auto; }
 
 .signup { display: flex; flex-wrap: wrap; gap: 10px; max-width: 30em; }
 .signup input { flex: 1 1 220px; min-width: 0; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: 400 16px Manrope, sans-serif; }
